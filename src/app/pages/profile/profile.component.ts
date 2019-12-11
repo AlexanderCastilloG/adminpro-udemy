@@ -13,7 +13,7 @@ export class ProfileComponent implements OnInit {
 
   usuario: Usuario;
   imagenSubir: File;
-  imagenTemp: String;
+  imagenTemp: string;
 
   constructor(public _usuarioService: UsuarioService) {
     this.usuario = this._usuarioService.usuario;
@@ -55,7 +55,7 @@ export class ProfileComponent implements OnInit {
       // es una data:image en bas64
       // console.log(reader.result);
       this.imagenTemp = reader.result as string;
-    }
+    };
   }
 
   cambiarImagen() {

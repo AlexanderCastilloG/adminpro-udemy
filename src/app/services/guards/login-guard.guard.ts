@@ -14,10 +14,10 @@ export class LoginGuardGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
       if (this._usuarioService.estaLogueado()) {
-        console.log('PASO EL GUARD');
+        // console.log('PASO EL GUARD');
         return true;
       } else {
-        console.log('Bloqueado por guard');
+        // console.log('Bloqueado por guard');
         this.router.navigate(['/login']);
         return false;
       }
